@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+     <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p style="font-family:'Times New Roman', serif;"> Student at KL University. </p>
+            <br>
+            <h1 >Hi, I am <span > Joshita Kadiyala.</span>  </h1>
+            <h2 >I am currently pursuing my B.tech degree with AI & DS specialization.</h2>
+        </div>
+     </div>
+</div>  
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/phone-background.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <br>
+                <p>"I'm Joshitakadiyala, a 19-year-old BTech student at KL University, specializing in AI and Data Science.<br>
+                     Passionate about technology, I am deeply interested in machine learning and data analysis, constantly exploring new ways to solve real-world problems.<br>
+                     My goal is to leverage AI to create impactful solutions that drive innovation and efficiency."</p>
+                 <div class="tab-titles">
+                    <p class="tab-links s active-link" onclick="sk()">Skills</p>
+                    <p class="tab-links e" onclick="edu()">Education</p>
+                 </div>
+                 <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                        <li><span>Web Development</span><br>Web App Development</li>
+                        <li><span>App Development</span><br>Building Android/iOS apps</li>
+                    </ul>
+                 </div>
+                 <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022-current</span><br>B.tech at KLU</li>
+                        <li><span>2020-2022</span><br>Intermediate </li>
+                        <li><span>2019-2020</span><br>10th class</li>
+                    </ul>
+                 </div>
+             </div>
+        </div>
+    </div>
+</div>
+<script>
+    var skills = document.getElementsByClassName("s");
+    var education = document.getElementsByClassName("e");
+    var skillTable = document.getElementById("skills");
+    var eduTable = document.getElementById("education");
+
+    function edu(){
+        eduTable.classList.add("active-tab");
+        skillTable.classList.remove("active-tab");
+        education[0].classList.add("active-link");
+        skills[0].classList.remove("active-link");
+    }
+    function sk(){
+        skillTable.classList.add("active-tab");
+        eduTable.classList.remove("active-tab");
+        skills[0].classList.add("active-link");
+        education[0].classList.remove("active-link");
+    }
+</script>
+<!-- ---portfolio--- -->
+ <div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/recipe.png.jpg" >
+                <div class="layer">
+                    <h3>Recipe Book Website</h3>
+                    <p>This is a website designed to store recipes of various food items and access them when ever we want</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/snake game.png" >
+                <div class="layer">
+                    <h3>Snake Game</h3>
+                    <p>This is a typical snake game where we can control a snake to eat food and grow as long as possible without colliding with itself or the walls</p>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+
+
+
+<div id="contact">
+    <div class= "container">
+        <div class ="row">
+        <div class="new">
+            <h1 class="sub-title">Contact Me</h1><br/>
+            <h3> Email Id: joshitakadiyala@gmail.com </h3>
+        </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
